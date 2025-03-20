@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 20
+names: ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow', 'diningtable', 'dog', 'horse', 'motorbike', 'person', 'pottedplant', 'sheep', 'sofa', 'train', 'tvmonitor']
+
+roboflow:
+  workspace: jacob-solawetz
+  project: pascal-voc-2012
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/jacob-solawetz/pascal-voc-2012/dataset/1
