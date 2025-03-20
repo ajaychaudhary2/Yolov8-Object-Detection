@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #222;
+            margin-top: 20px;
+        }
+
+        .upload-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: 20px;
+        }
+
+        input[type="file"] {
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .btn {
+            background: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 500px;
+        }
+
+        .image-box img {
+            width: 100%;
+            max-width: 480px; /* Increase max width for better visibility */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-box h3 {
+            font-size: 20px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image for Object Detection</h1>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <div class="upload-section">
+            <input type="file" id="fileInput" name="file" required>
+            <button class="btn" type="submit">Upload & Detect</button>
+        </div>
+    </form>
+
+    <div class="image-container">
+        <div class="image-box">
+            <h3>Uploaded Image</h3>
+            <img src="{{ uploaded_img if uploaded_img else '' }}" alt="Uploaded Image">
+        </div>
+
+        <div class="image-box">
+            <h3>Processed Image</h3>
+            <img src="{{ processed_img if processed_img else '' }}" alt="Processed Image">
+        </div>
+    </div>
+</body>
+</html>
