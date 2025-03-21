@@ -80,8 +80,8 @@ Contributions are always welcome! Feel free to fork the repository and submit a 
 
 ## 📢 Connect with Me
 - 🔗 **GitHub**: [@ajaychaudhary2](https://github.com/ajaychaudhary2)
-- 💼 **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- ✉️ **Email**: your-email@example.com
+- 💼 **LinkedIn**: https://www.linkedin.com/in/ajay-chaudhary-02287a2ab/
+- ✉️ **Email**: ajaych2822@gmail.com
 
 ---
 
